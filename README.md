@@ -1,12 +1,21 @@
-# Dynamic Portfolio Optimization with LSTM
+# TFM - LSTM Portfolio Optimization
 
-This repository contains the code developed for a Master's Thesis on dynamic portfolio allocation using Deep Learning.
+Este repositorio contiene el código desarrollado para el Trabajo Final de Máster titulado:
 
-The project implements and evaluates an end-to-end LSTM model that generates portfolio weights directly from historical market data. The model is compared against traditional strategies such as Buy & Hold ACWI, Equal Weight allocation and Markowitz Max Sharpe optimization.
+**Optimización de carteras mediante Deep Learning: diseño y análisis de un sistema de asignación dinámica de activos basado en LSTM**
 
-## Assets
+## Descripción
 
-The investment universe consists of the following ETFs:
+El proyecto implementa un sistema cuantitativo de asignación dinámica de activos basado en redes neuronales LSTM bajo un enfoque end-to-end. El modelo genera directamente los pesos de una cartera compuesta por ETFs y se compara frente a estrategias tradicionales como:
+
+- Buy & Hold sobre ACWI
+- Equal Weight
+- Optimización Markowitz Max Sharpe restringida
+- Modelo LSTM end-to-end
+
+## Universo de inversión
+
+Los activos utilizados son:
 
 - SPY
 - VGK
@@ -16,38 +25,27 @@ The investment universe consists of the following ETFs:
 - XLE
 - GLD
 
-The benchmark used is ACWI.
+El benchmark utilizado es:
 
-## Methodology
+- ACWI
 
-The project uses:
+## Metodología
 
-- Weekly historical data obtained with `yfinance`
-- Monthly portfolio rebalancing
-- Feature engineering based on returns, volatility, RSI, moving averages and VIX
-- Walk-forward validation
-- Transaction costs
-- LSTM end-to-end portfolio weight generation
-- Sharpe ratio loss penalized by turnover
+El sistema utiliza datos semanales descargados mediante `yfinance`, ingeniería de variables financieras, rebalanceo mensual y validación walk-forward fuera de muestra.
 
-## Repository structure
+Las principales métricas evaluadas son:
 
-- `notebooks/`: main notebook with the complete implementation
-- `src/`: auxiliary Python scripts
-- `results/`: generated metrics and figures
+- CAGR
+- Volatilidad anualizada
+- Ratio de Sharpe
+- Maximum Drawdown
+- Tracking Error
+- Information Ratio
+- Turnover
 
-## Requirements
+## Notebook principal
 
-The main Python libraries used are:
+El notebook principal del proyecto es:
 
-- numpy
-- pandas
-- yfinance
-- scikit-learn
-- tensorflow
-- scipy
-- matplotlib
-
-## Disclaimer
-
-This project is developed for academic purposes only and does not constitute financial advice.
+```text
+TFM_LSTM_Portfolio_Optimization.ipynb
