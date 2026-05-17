@@ -1,4 +1,3 @@
-# tfm-portfolio-optimization-lstm
 # Dynamic Portfolio Optimization with LSTM
 
 This repository contains the code developed for a Master's Thesis on dynamic portfolio allocation using Deep Learning.
